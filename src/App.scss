@@ -1,0 +1,163 @@
+:root {
+  --color1: #101018;
+  --color2: #40b4e0;
+  --color3: #E0693E;
+  --color4: #3591B5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#title {
+  color: var(--color4);
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#copy {
+  color: var(--color4);
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 480px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background: var(--color1);
+  color: turquoise;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#clock {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 600px;
+  height: 250px;
+  box-shadow: #40b4e0 0px 5px 35px -10px;
+  border-radius: 50px;
+  padding: 0px 16px;
+  background: var(--color1);
+}
+
+#length-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  
+  .length-label {
+    font-size: 16px;
+    color: var(--color4);
+    text-shadow: 0 0 1px var(--color2);
+    margin-top: 8px;
+    font-weight: 300;
+  }
+
+  .settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    
+    #break-length {
+      font-size: 24px;
+      color: var(--color3);
+      text-shadow: 0 0 2px var(--color3);
+      font-family: 'Roboto Mono', monospace;
+    }
+    
+    #session-length {
+      font-size: 24px;
+      color: var(--color3);
+      text-shadow: 0 0 2px var(--color3);
+      font-family: 'Roboto Mono', monospace;
+    }
+  
+    button {
+      background: white;
+      border: none;
+      border-radius: 5px;
+      background: var(--color1);
+      color: var(--color4);
+      text-shadow: 0 0 1px var(--color2);
+      width: 24px;
+      height: 24px;
+    }
+    
+    button:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+#timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  #timer-label {
+    font-size: 22px;
+    color: var(--color4);
+    text-shadow: 0 0 1px var(--color2);
+    text-align: center;
+  }
+  
+  #time-left {
+    font-size: 72px;
+    color: var(--color3);
+    text-shadow: 0 0 2px var(--color3);
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .timer-buttons {
+    background: white;
+    border: none;
+    border-radius: 5px;
+    background: var(--color1);
+    color: var(--color4);
+    text-shadow: 0 0 1px var(--color2);
+    padding: 2px 4px;
+    margin: 2px 8px;
+  }
+  
+  .timer-buttons:hover {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 650px) {
+  #clock {
+    flex-direction: column-reverse;
+    width: 300px;
+    height: 80vh;
+    max-height: 600px;
+    min-height: 350px;
+    padding: 24px 16px 16px 16px;
+  }
+
+  #length-controls {
+    width: 52%;
+  }
+
+}
