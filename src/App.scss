@@ -32,7 +32,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  min-height: 480px;
+  min-height: 300px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   background: var(--color1);
@@ -147,6 +147,10 @@ body {
 }
 
 @media (max-width: 650px) {
+  body {
+    min-height: 480px;
+  }
+
   #clock {
     flex-direction: column-reverse;
     width: 300px;
